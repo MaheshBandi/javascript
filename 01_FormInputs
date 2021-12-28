@@ -1,0 +1,26 @@
+const formData={}
+
+const searchBox = document.querySelector('#search');
+const checkbox = document.querySelector('#checkbox');
+const veggie = document.querySelector('#veggie');
+
+for(input of [searchBox,checkbox,veggie]){
+ input.addEventListener('input',function({target}){
+    const {name, type,value,checked} = target;
+    formData[name] = type ==='checkbox' ? checked : value;
+
+})
+}
+
+
+<html class=""><head></head><body>
+<form>
+<input type="text" name="search" id="search">
+<input type="checkbox" name="checkbox" id="checkbox">
+<select id="veggie" name="veggie">
+ <option value="EggPlant">Egg plant</option>
+ <option value="assparagus">assparagus</option>
+ <option value="carrot">Carrot</option>   
+</select>
+</form>
+</body></html>
